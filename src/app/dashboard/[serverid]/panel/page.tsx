@@ -1,7 +1,7 @@
-export default function Panel({params}: {
-    params: {serverid:number}
-}){
+export default async function Panel({ params }: { params: { serverid: number } }) {
+    const { serverid } = await params;
+    
     return (
-        <h1>Panel with ID: {params.serverid}</h1>
-    )
+        <h1>Panel with ID: {serverid}</h1>
+    );
 }
